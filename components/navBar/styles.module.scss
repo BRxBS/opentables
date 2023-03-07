@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5rem;
+
+    a{
+        font: 600;
+        color: gray;
+        font-size: large;
+    }
+    div{
+        display: flex;
+    }
+
+    button{
+        background-color: aqua;
+        color: white;
+        border: 1px;
+        border-radius: 5px;
+        padding: 0.25rem;
+        padding: 0px 1rem;
+    }
+    .SingUpButton{
+        border: 1px;
+        border-radius: 5px;
+        padding: 0.25rem;
+        padding: 0px 1rem;
+    }
+}
