@@ -1,0 +1,78 @@
+.mainContainer{
+    background-color: gray;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+.mainContent{
+    max-width: 1536px;
+    margin: auto;
+    background-color: white;
+}
+.divContainer{
+    border-top: 1px;
+    height: 100%;
+
+    .divContent{
+      padding: 2.25rem;
+      width: 60%;
+
+      div{
+        h3{
+            font-weight: bold;
+        }
+        .divWrapper{
+            display: flex;
+            margin-top: 1.5rem;
+
+            img{
+                width: 8rem;
+            }
+        }
+        .divInfo{
+            margin-left: 1rem;
+            h1{
+                font-size: 1.875rem; 
+                line-height: 2.25rem;
+                font-weight: bold;
+            }
+            div{
+                display: flex;
+                margin-top: 0.75rem;
+                p{
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+      }
+    }
+}
+
+
+form{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 6600px;
+
+    input{
+        border-radius: 5px;
+        padding: 0.75rem;
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+    button{
+        background-color: red;
+        width: 100%;
+        padding: 0.75rem;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+
+    }
+    p{
+        margin-top: 1rem;
+        font-size: small;
+    }
+}
+
