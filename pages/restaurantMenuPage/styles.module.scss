@@ -1,0 +1,99 @@
+.mainContainer{
+    background-color: gray;
+    min-height: 100vh;
+    width: 100vh;
+
+}
+.SecondMainContainer{
+    max-width: 42rem;
+    margin: auto;
+    background-color: white;
+}
+header{
+    height: 24rem;
+    overflow: hidden;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: rgb(15,31,71);
+        background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
+    
+        h1{
+            font-size: 4.5rem; 
+            line-height: 1;
+            color: white;
+            text-transform: capitalize;
+            text-shadow: 2px 2px #ff0000;
+            text-align: center;
+        }
+    }
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    width: 66%;
+    div{
+        background-color: white;
+        width: 100%;
+        border-radius: 5px;
+        
+        nav{
+            display: flex;
+            font-size: medium;
+            border-bottom: 1px;
+            padding-bottom: 0.5rem;
+
+            a{
+                margin-right: 2.25rem;
+            }
+        }
+        main{
+            background-color: white;
+            margin-top: 2.25rem;
+
+            div{
+                .one{
+                    margin-top: 2rem;
+                    margin-bottom: 025rem;
+                    margin-bottom: 0.25rem;
+                    h1{
+                        font-weight: bold;
+                        font-size: 2.25rem;
+                        line-height: 2.5rem;
+                    }
+                }
+
+                .menuCard{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    div{
+                        border-radius: 5px;
+                        padding: 1.25rem;
+                        width: 29%;
+                        margin-bottom: 1.25rem;
+
+                        h3{
+                            font-weight: bold;
+                            font-size: medium;
+                        }
+                        p{
+                            font-weight: lighter;
+                            margin-top: 0.25rem;
+                            font-size: small;
+                        }
+                        .p{
+                            margin-top: 2.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
