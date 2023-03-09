@@ -2,7 +2,7 @@ import { NavBAr } from '../../components/navBar';
 import { Header } from '../../components/header';
 import s from './styles.module.scss';
 
-export function RestaurantMenuPage(){
+export default function RestaurantMenuPage(){
     return(
         <>
     <main className={s.mainContainer}>
@@ -21,7 +21,7 @@ export function RestaurantMenuPage(){
             
             {/* DESCRIPTION PORTION */}
             <div className={s.description}>
-            <div>
+            <div className={s.div}>
                 {/* RESAURANT NAVBAR */}
                 <nav>
                 <a href=""> Overview </a>

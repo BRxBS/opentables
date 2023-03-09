@@ -2,7 +2,7 @@ import { NavBAr } from '../../components/navBar';
 import { Header } from '../../components/header';
 import s from './styles.module.scss';
 
-export function restaurantDetailsPage(){
+export default function RestaurantDetailsPage(){
     return(
         <>
     <main className={s.mainContainer}>
@@ -149,7 +149,7 @@ export function restaurantDetailsPage(){
                     </select>
                     </div>
                 </div>
-                <div>
+                <div className={s.divFour}>
                     <button>
                     Find a Time
                     </button>
