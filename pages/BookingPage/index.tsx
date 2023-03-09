@@ -2,7 +2,8 @@ import { NavBAr } from '../../components/navBar';
 import { Header } from '../../components/header';
 import s from './styles.module.scss';
 
-export function ReservationPage(){
+export default function BookingPage(){
+    
     return(
         <>
     <main className={s.mainContainer}>
