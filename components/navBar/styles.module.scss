@@ -1,30 +1,41 @@
-nav{
+.nav{
     display: flex;
     justify-content: space-between;
     background-color: white;
     padding: 0.5rem;
 
     a{
-        font: 600;
+        font-weight: 600;
         color: gray;
-        font-size: large;
+        font-size: 2rem;
+        text-decoration: none;
+
     }
     div{
         display: flex;
     }
+    div{
+        display: flex;
+        justify-content: space-between;
+        width: 11rem;
+        button{
+            background-color: aqua;
+            width: 5rem;
+            color: white;
+            border: 1px;
+            border-radius: 5px;
+            padding: 0.25rem;
+            padding: 1rem 0.5rem;
+        }
+        .SingUpButton{
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0.25rem;
+            padding: 0px 1rem;
+            color: black;
+        }
+    }
 
-    button{
-        background-color: aqua;
-        color: white;
-        border: 1px;
-        border-radius: 5px;
-        padding: 0.25rem;
-        padding: 0px 1rem;
-    }
-    .SingUpButton{
-        border: 1px;
-        border-radius: 5px;
-        padding: 0.25rem;
-        padding: 0px 1rem;
-    }
+
 }
