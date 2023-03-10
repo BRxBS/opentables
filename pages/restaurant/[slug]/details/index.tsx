@@ -1,8 +1,9 @@
-import { NavBAr } from '../../components/navBar';
-import { Header } from '../../components/header';
+import Link from 'next/link';
+import { NavBAr } from '../../../../components/navBar';
+import { Header } from '../../../../components/header';
 import s from './styles.module.scss';
 
-export default function RestaurantDetailsPage(){
+export default function RestaurantDetails(){
     return(
         <>
     <main className={s.mainContainer}>
@@ -25,8 +26,8 @@ export default function RestaurantDetailsPage(){
             <div className={s.discriptionContent}>
                 {/* RESAURANT NAVBAR */}
                 <nav>
-                <a href="" > Overview </a>
-                <a href="" > Menu </a>
+                <Link href="/restaurant/mill-grill/details"  > Overview </Link>
+                <Link href="/restaurant/mill-grill/menu"  > Menu </Link>
                 </nav>
                 {/* RESAURANT NAVBAR */}
                  {/* TITLE */}
