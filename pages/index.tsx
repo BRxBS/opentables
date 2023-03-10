@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import { Header } from '../components/header'
 import { NavBAr } from '../components/navBar'
 import styles from '../styles/home.module.scss'
 
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -27,6 +28,7 @@ export default function HomePage() {
             <div className={styles.cardsWrapper}>
 
             {/* CARD */}
+            <Link href="/restaurant/mill-grill/details" className={styles.link}>
                 <div
                 className={styles.cardContentWrapper}
                 >
@@ -50,6 +52,7 @@ export default function HomePage() {
                 </div>
                 </div>
                 {/* CARD */}
+                </Link>
             </div>
             {/* CARDS */}
             </main>
