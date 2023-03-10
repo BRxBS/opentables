@@ -1,8 +1,8 @@
-import { NavBAr } from '../../components/navBar';
-import { Header } from '../../components/header';
+import { NavBAr } from '../../../../components/navBar';
+import { Header } from '../../../../components/header';
 import s from './styles.module.scss';
 
-export default function RestaurantMenuPage(){
+export default function RestaurantMenu(){
     return(
         <>
     <main className={s.mainContainer}>
