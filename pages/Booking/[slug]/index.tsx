@@ -1,8 +1,8 @@
-import { NavBAr } from '../../components/navBar';
-import { Header } from '../../components/header';
-import s from './styles.module.scss';
+import { NavBAr } from '../../../components/navBar';
+import { Header } from '../../../components/header';
+import s from '../styles.module.scss';
 
-export default function BookingPage(){
+export default function Booking(){
     
     return(
         <>

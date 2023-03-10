@@ -2,7 +2,7 @@ import { NavBAr } from '../../components/navBar';
 import { Header } from '../../components/header';
 import s from './styles.module.scss';
 
-export default function SearchPage(){
+export default function Search(){
     return(
         <>
         <main className={s.mainContainer}>
