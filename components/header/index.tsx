@@ -1,7 +1,9 @@
+import { SearchBar } from './SearchBar';
 import styles from './styles.module.scss';
 
 
 export function Header(){
+
     return(
         <>
             <header className={styles.header}>
@@ -9,17 +11,7 @@ export function Header(){
                 <h1>
                     Find your table for any occasion
                 </h1>
-                {/* SEARCH BAR */}
-                <div>
-                    <input
-                    type="text"
-                    placeholder="State, city or town"
-                    />
-                    <button >
-                    Let's go
-                    </button>
-                </div>
-                {/* SEARCH BAR */}
+                <SearchBar/>
                 </div>
             </header>
         </>
