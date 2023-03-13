@@ -1,0 +1,106 @@
+.mainContainer{
+    background-color: rgb(242, 242, 242);
+    min-height: 100vw;
+
+
+}
+.SecondMainContainer{
+
+    max-width: 75%;
+    margin: auto;
+    background-color: white;
+
+    header{
+        height: 24rem;
+        overflow: hidden;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: rgb(15,31,71);
+            background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
+        
+            h1{
+                font-size: 4.5rem; 
+                line-height: 1;
+                color: white;
+                text-transform: capitalize;
+                text-shadow: 2px 2px #ff0000;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.description{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: -3rem;
+    .div{
+        background-color: white;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05);
+        padding: 0.75rem;
+        
+        nav{
+            display: flex;
+            font-size: medium;
+            border-bottom: 1px;
+     
+            a{
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-right: 1.75rem;
+                text-decoration: none;
+                color: black;
+            }
+        }
+        main{
+            div{
+                .one{
+                    margin: 1rem 0px;
+                    border-top: 1px solid #dcd1d1;
+                    border-bottom: 1px solid #dcd1d1;
+                   
+                    h1{
+                        font-weight: bold;
+                        font-size: 2.25rem;
+                        line-height: 2.5rem;
+                    }
+                }
+
+                .menuCard{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 50%;
+                    height: 10rem;
+                    border: 1px solid #dcd1d1;
+
+                    div{
+                        border-radius: 5px;
+                        padding: 1rem;
+                       
+
+                        h3{
+                            font-weight: bold;
+                            font-size:1.25rem;
+                        }
+                        p{
+                            font-weight: lighter;
+                            margin-top: 0.25rem;
+                            
+                        }
+                    
+                    }
+                }
+            }
+        }
+    }
+
+}
