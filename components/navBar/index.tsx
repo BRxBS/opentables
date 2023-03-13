@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './styles.module.scss';
 
 
-export function NavBAr(){
+export function NavBar(){
     return(
         <>
         <nav className={styles.nav}>
@@ -15,7 +15,7 @@ export function NavBAr(){
                 <button className={styles.SingUpButton}>Sign up</button>
                 </div>
             </div>
-            </nav>
+        </nav>
         </>
     )
 }
