@@ -1,12 +1,18 @@
 .mainContainer{
     background-color: rgb(242, 242, 242);
     min-height: 100vw;
+    height: auto;
     
 }
 .SecondMainContainer{
-    max-width: 70%;
+    max-width: 100%;
     margin: auto;
     background-color: white;
 }
 
+@media only screen and (min-width: 600px) {
+    .SecondMainContainer{
+        max-width: 70%;
 
+    }
+  }
