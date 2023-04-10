@@ -1,15 +1,17 @@
 .mainContainer{
     background-color: rgb(242, 242, 242);
     min-height: 100vw;
+    height: auto;
 }
 .mainContent{
-    max-width: 75%;
+    
     margin: auto;
     background-color: white;
     
     header{
         height: 24rem;
         overflow: hidden;
+
         div{
             display: flex;
             justify-content: center;
@@ -17,9 +19,10 @@
             height: 100%;
             background: rgb(15,31,71);
             background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
-        
+            padding: 0rem 2rem;
+
             h1{
-                font-size: 4.5rem; 
+                font-size: 3rem; 
                 line-height: 1;
                 color: white;
                 text-transform: capitalize;
@@ -33,7 +36,6 @@
 
 .discriptionContainer{
     display: flex;
-    width: 90%;
     justify-content: space-between;
     align-items: flex-start;
     margin: auto;
@@ -42,7 +44,7 @@
     
     .discriptionContent{
         background-color: white;
-        width: 70%;
+        width: 95%;
         border-radius: 5px;
         box-shadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05);
         padding: 0.75rem;
@@ -116,11 +118,12 @@
         div{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
           
 
             img{
-                width: 14rem;
-                height: 11rem;
+                width: 10rem;
+                height: 7.5rem;
                 margin-right: 0.25rem;
                 margin-bottom: 0.25rem;
             }
@@ -130,3 +133,60 @@
 
 
 }
+@media only screen and (min-width: 600px) {
+    .mainContainer{
+        max-width: 75%;
+
+    }
+    .mainContent{
+    
+        margin: auto;
+        background-color: white;
+        
+        header{
+ 
+            div{
+  
+                h1{
+                    font-size: 4.5rem; 
+                }
+            }
+        }
+    }
+    .discriptionContainer{
+        width: 90%;
+   
+        .discriptionContent{
+            width: 70%;
+    
+        }
+
+
+        .imgWrapper{
+            h1{
+                font-weight: bold;
+                font-size: 1.875rem; 
+                line-height: 2.25rem; 
+                margin-top: 2.5rem;
+                margin-bottom: 1.75rem;
+                border-bottom: 1px solid #dcd1d1;
+                padding-bottom: 1rem;
+            }
+            div{
+                display: flex;
+                flex-wrap: wrap;
+              
+    
+                img{
+                    width: 14rem;
+                    height: 11rem;
+                    margin-right: 0.25rem;
+                    margin-bottom: 0.25rem;
+                }
+            }
+        }
+    
+    
+    
+    }
+  }

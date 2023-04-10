@@ -6,7 +6,6 @@
 }
 .SecondMainContainer{
 
-    max-width: 75%;
     margin: auto;
     background-color: white;
 
@@ -14,6 +13,7 @@
         height: 24rem;
         overflow: hidden;
         div{
+            padding: 0px 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,7 +22,7 @@
             background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
         
             h1{
-                font-size: 4.5rem; 
+                font-size: 3rem; 
                 line-height: 1;
                 color: white;
                 text-transform: capitalize;
@@ -35,7 +35,7 @@
 
 .description{
     display: flex;
-    width: 60%;
+    width: 90%;
     justify-content: space-between;
     align-items: flex-start;
     margin: auto;
@@ -90,6 +90,7 @@
                         h3{
                             font-weight: bold;
                             font-size:1.25rem;
+                            margin: 0px;
                         }
                         p{
                             font-weight: lighter;
@@ -104,3 +105,50 @@
     }
 
 }
+@media only screen and (min-width: 600px) {
+
+    .SecondMainContainer{
+    
+        max-width: 75%;
+  
+    
+        header{
+
+            div{
+    
+                h1{
+                    font-size: 4.5rem; 
+                }
+            }
+        }
+    }
+    
+    .description{
+    
+        width: 60%;
+  
+        .div{
+    
+   
+            main{
+                div{
+                 
+    
+                    .menuCard{
+                     
+    
+                        div{
+                          
+                            h3{
+                                font-weight: bold;
+                                font-size:1.25rem;
+                                margin: auto;
+                            }                    
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+  }

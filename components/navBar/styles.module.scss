@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     background-color: white;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
 
     a{
         font-weight: 600;
         color: gray;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-decoration: none;
 
     }
@@ -19,7 +19,7 @@
         justify-content: space-between;
         width: 11rem;
         button{
-            background-color: aqua;
+            background-color:  rgb(15,31,71);;
             width: 5rem;
             color: white;
             border: 1px;
@@ -39,3 +39,10 @@
 
 
 }
+@media only screen and (min-width: 600px) {
+.nav{
+    a{
+        font-size: 2rem;
+    }
+}
+  }

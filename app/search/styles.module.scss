@@ -6,7 +6,6 @@
 }
 .SecondMainContainer{
 
-    max-width: 70%;
     margin: auto;
     background-color: white;
 
@@ -19,64 +18,7 @@
     margin: auto;
     width: 66%;
 
-    .divContent{
-        width: 30%;
 
-        .one{
-            border-bottom: 1px;
-            padding-bottom: 1rem;
-            width: auto;
-            
-            h1{
-                margin-bottom: 0.5rem;
-            }
-            p{
-                font-weight: lighter;
-                font-size: medium;
-            }
-        }
-        .two{
-            width: auto;
-            border-bottom: 1px;
-            padding-bottom: 1rem;
-            margin-top: 0.75rem;
-
-            h1{
-                margin-bottom: 0.5rem;
-            }
-            p{
-                font-weight: lighter;
-                font-size: medium;
-            }
-        }
-        .three{
-            width: auto;
-            margin-top: 0.75rem;
-            padding-bottom: 1rem;
-            
-            h1{
-                margin-bottom: 0.5rem;
-            }
-            div{
-                display: flex;
-            }
-            .button{
-                background-color: white;
-                border: 1px solid #dcd1d1;
-                width: 100%;
-                font-size: medium;
-                padding: 0.5rem 1rem;
-            }
-            button{
-                background-color: white;
-                border: 1px solid #dcd1d1;
-                width: 100%;
-                font-size: medium;
-                padding: 0.5rem;
-                font-weight: lighter;
-            }
-        }
-    }
     .cardContainer{
         width: 83%;
         border-bottom: 1px solid #dcd1d1;
@@ -133,3 +75,142 @@
         }
     }
 }
+@media only screen and (min-width: 600px) {
+    .mainContainer{
+        background-color: rgb(242, 242, 242);
+        min-height: 100vw;
+    
+    
+    }
+    .SecondMainContainer{
+    
+        max-width: 70%;
+        margin: auto;
+        background-color: white;
+    
+    }
+    .divContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0px 2rem;
+        margin: auto;
+        width: 66%;
+    
+        .divContent{
+            width: 30%;
+    
+            .one{
+                border-bottom: 1px;
+                padding-bottom: 1rem;
+                width: auto;
+                
+                h1{
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    font-weight: lighter;
+                    font-size: medium;
+                }
+            }
+            .two{
+                width: auto;
+                border-bottom: 1px;
+                padding-bottom: 1rem;
+                margin-top: 0.75rem;
+    
+                h1{
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    font-weight: lighter;
+                    font-size: medium;
+                }
+            }
+            .three{
+                width: auto;
+                margin-top: 0.75rem;
+                padding-bottom: 1rem;
+                
+                h1{
+                    margin-bottom: 0.5rem;
+                }
+                div{
+                    display: flex;
+                }
+                .button{
+                    background-color: white;
+                    border: 1px solid #dcd1d1;
+                    width: 100%;
+                    font-size: medium;
+                    padding: 0.5rem 1rem;
+                }
+                button{
+                    background-color: white;
+                    border: 1px solid #dcd1d1;
+                    width: 100%;
+                    font-size: medium;
+                    padding: 0.5rem;
+                    font-weight: lighter;
+                }
+            }
+        }
+        .cardContainer{
+            width: 83%;
+            border-bottom: 1px solid #dcd1d1;
+            .div{
+                display: flex;
+                border-bottom: 1px;
+                padding: 1rem 0px;
+                img{
+                    height: 11rem;
+                    border-radius: 5px;
+                }
+                .info{
+                    width: 20rem;
+                    padding-left: 1rem;
+    
+                    h2{
+                        margin: 0px;
+                        font-size: 1.5rem;
+                        line-height: 1.5rem;
+                    }
+                    .divOne{
+                        display: flex;
+                        align-items: flex-start;
+                        padding: 0px;
+                        
+                        p{
+                            padding: 0px 1rem;
+                            align-items: center;
+                            font-size: small;
+                        }
+    
+                    }
+                    .divTwo{
+                           
+                            
+                            display: flex;
+                            p{
+                                padding: 0px 1rem;
+                                font-weight: lighter;
+                               
+                                font-size: medium;
+        
+                               
+                                
+                            }
+    
+                    }
+                }
+                a{
+                    margin-left: 1rem;
+                    text-decoration: none;
+                    color: rgb(188, 10, 10)
+                }
+            }
+        }
+    }
+
+    
+  }
