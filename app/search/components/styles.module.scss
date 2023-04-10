@@ -1,0 +1,61 @@
+.divContent{
+    width: 30%;
+
+    .one{
+        border-bottom: 1px;
+        padding-bottom: 1rem;
+        width: auto;
+        
+        h1{
+            margin-bottom: 0.5rem;
+        }
+        p{
+            font-weight: lighter;
+            font-size: medium;
+        }
+    }
+    .two{
+        width: auto;
+        border-bottom: 1px;
+        padding-bottom: 1rem;
+        margin-top: 0.75rem;
+
+        h1{
+            margin-bottom: 0.5rem;
+        }
+        p{
+            font-weight: lighter;
+            font-size: medium;
+        }
+    }
+    .three{
+        width: auto;
+        margin-top: 0.75rem;
+        padding-bottom: 1rem;
+        
+        h1{
+            margin-bottom: 0.5rem;
+        }
+        div{
+            display: flex;
+        }
+        .button{
+            background-color: white;
+            border: 1px solid #dcd1d1;
+            width: 100%;
+            font-size: medium;
+            padding: 0.5rem 1rem;
+        }
+        button{
+            background-color: white;
+            border: 1px solid #dcd1d1;
+            width: 100%;
+            font-size: medium;
+            padding: 0.5rem;
+            font-weight: lighter;
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+
+  }
