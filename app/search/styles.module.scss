@@ -11,68 +11,22 @@
 
 }
 .divContainer{
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0px 2rem;
+   
     margin: auto;
-    width: 66%;
+    width: 100%;
 
+    .divSideBar{
+        display: none;
+    }
 
     .cardContainer{
-        width: 83%;
+        width: 100%;
         border-bottom: 1px solid #dcd1d1;
-        .div{
-            display: flex;
-            border-bottom: 1px;
-            padding: 1rem 0px;
-            img{
-                height: 11rem;
-                border-radius: 5px;
-            }
-            .info{
-                width: 20rem;
-                padding-left: 1rem;
 
-                h2{
-                    margin: 0px;
-                    font-size: 1.5rem;
-                    line-height: 1.5rem;
-                }
-                .divOne{
-                    display: flex;
-                    align-items: flex-start;
-                    padding: 0px;
-                    
-                    p{
-                        padding: 0px 1rem;
-                        align-items: center;
-                        font-size: small;
-                    }
 
-                }
-                .divTwo{
-                       
-                        
-                        display: flex;
-                        p{
-                            padding: 0px 1rem;
-                            font-weight: lighter;
-                           
-                            font-size: medium;
-    
-                           
-                            
-                        }
-
-                }
-            }
-            a{
-                margin-left: 1rem;
-                text-decoration: none;
-                color: rgb(188, 10, 10)
-            }
-        }
     }
 }
 @media only screen and (min-width: 600px) {
@@ -96,6 +50,14 @@
         padding: 0px 2rem;
         margin: auto;
         width: 66%;
+
+        .divMobileBar{
+            display: none;
+        }
+        .divSideBar{
+            display: block;
+            padding: 0rem 1rem;
+        }
     
         .divContent{
             width: 30%;

@@ -5,7 +5,7 @@ export function RestaurantCard(){
 
     return(
         <>
-                <div className={s.div}>
+                <div className={s.cardContent}>
                 <img
                     src="https://images.otstatic.com/prod1/49153814/2/medium.jpg"
                     alt=""

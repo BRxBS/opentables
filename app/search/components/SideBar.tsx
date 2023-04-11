@@ -1,29 +1,16 @@
-import { useEffect, useState } from 'react';
+"use client"
+
 import s from '../styles.module.scss';
-import {List} from 'phosphor-react'
+
 
 export function SideBar(){
-const [isOpen, setIsOpen] = useState(false);
-
-useEffect(()=> {
-
-    const handler = () => setIsOpen(false)
-    window.addEventListener('click', handler)
-    return () => {
-        window.addEventListener('click', handler)
-    }
-},[])
-
-const handleInputClick = (e: { stopPropagation: () => void; }) => {
-    e.stopPropagation()
-    setIsOpen(!isOpen)
-}
 
 
     return(
+          
         <>
-        <List size={32} color="#fffafa" />
-     <div className={s.divContent} >
+            <aside className={s.asideContent} >
+
                 <div className={s.one}>
                 <h1>Region</h1>
                 <p>Toronto</p>
@@ -53,7 +40,11 @@ const handleInputClick = (e: { stopPropagation: () => void; }) => {
                     </button>
                 </div>
                 </div>
-            </div>
+            </aside>
+       
+        
+       
+
         </>
     )
 }

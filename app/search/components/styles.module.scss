@@ -1,6 +1,5 @@
-.divContent{
+.asideContent{
     width: 30%;
-
     .one{
         border-bottom: 1px;
         padding-bottom: 1rem;
@@ -56,6 +55,175 @@
         }
     }
 }
+.cardContent{
+
+        display: flex;
+        border-bottom: 1px;
+        padding: 1rem 1rem;
+      
+        img{
+            height: 7rem;
+            border-radius: 5px;
+        }
+        .info{
+            width: auto;
+            padding-left: 0.5rem;
+
+            h2{
+                margin: 0px;
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+            .divOne{
+                display: flex;
+                align-items: flex-start;
+                padding: 0px;
+                
+                p{
+                    padding: 0px 1rem;
+                    align-items: center;
+                    font-size: small;
+                }
+
+            }
+            .divTwo{
+                   
+                    
+                    display: flex;
+                    p{
+                        padding: 0px 0.25rem;
+                        font-weight: lighter;
+                       
+                        font-size: medium;
+
+                       
+                        
+                    }
+
+            }
+        }
+        a{
+            margin-left: 1rem;
+            text-decoration: none;
+            color: rgb(188, 10, 10)
+        }
+    
+
+}
+
+
+.containerAside{
+    .Caret{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .MobileAsideContent{
+
+        padding: 0rem 2rem;
+        
+        .one{
+            border-bottom: 1px;
+            padding-bottom: 1rem;
+            width: auto;
+            
+            h1{
+                margin-bottom: 0.5rem;
+            }
+            p{
+                font-weight: lighter;
+                font-size: medium;
+            }
+        }
+        .two{
+            width: auto;
+            border-bottom: 1px;
+            padding-bottom: 1rem;
+            margin-top: 0.75rem;
+    
+            h1{
+                margin-bottom: 0.5rem;
+            }
+            p{
+                font-weight: lighter;
+                font-size: medium;
+            }
+        }
+        .three{
+            width: auto;
+            margin-top: 0.75rem;
+            padding-bottom: 1rem;
+            
+            h1{
+                margin-bottom: 0.5rem;
+            }
+            div{
+                display: flex;
+            }
+            .button{
+                background-color: white;
+                border: 1px solid #dcd1d1;
+                width: 100%;
+                font-size: medium;
+                padding: 0.5rem 1rem;
+            }
+            button{
+                background-color: white;
+                border: 1px solid #dcd1d1;
+                width: 100%;
+                font-size: medium;
+                padding: 0.5rem;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+
+.header{
+    height: 8rem;
+    background: rgb(15,31,71);
+    background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
+    padding: 0.5rem;
+
+    .divWrapper{
+        text-align: center;
+        margin-top: 2.5rem;
+     
+        
+        h1{
+            color: white;
+            font-size: 2rem;
+            line-height: 1;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            font-size: 1.125rem; 
+            line-height: 1.75rem;  
+            padding: 0.75rem 0px;    
+            margin: auto;
+           
+
+            input{
+                border-radius: 5px;
+                margin-right: 0.75rem;
+                padding: 0.5rem;
+                width: 28.125rem;
+            }
+            button{
+                border-radius: 5px;
+                padding: 0.5rem 1rem;
+                background-color: rgb(167, 24, 24);
+                color: white;
+              ;
+            }
+        }
+    }
+}
+ 
 @media only screen and (min-width: 600px) {
 
   }
