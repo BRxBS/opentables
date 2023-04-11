@@ -2,46 +2,19 @@
     background-color: rgb(242, 242, 242);
     min-height: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
-.mainContent{
-    
+.mainContent{  
     margin: auto;
-    background-color: white;
-    
-    header{
-        height: 24rem;
-        overflow: hidden;
-
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            background: rgb(15,31,71);
-            background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
-            padding: 0rem 2rem;
-
-            h1{
-                font-size: 3rem; 
-                line-height: 1;
-                color: white;
-                text-transform: capitalize;
-                text-shadow: 2px  #dcd1d1;
-                text-align: center;
-            }
-        }
-    }
+    background-color: white
 }
-
-
 .discriptionContainer{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: auto;
     margin-top: -3rem;
-
-    
+     
     .discriptionContent{
         background-color: white;
         width: 95%;
@@ -50,143 +23,44 @@
         padding: 0.75rem;
 
     }
-    nav{
-        display: flex;
-        font-size: medium;
-        border-bottom: 1px;
- 
-        a{
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-right: 1.75rem;
-            text-decoration: none;
-            color: black;
-        }
-    }
-    .divTitle{
-        margin-top: 1rem;
-        border-top: 1px solid #dcd1d1;
-        border-bottom: 1px solid #dcd1d1;
-       
-        h1{
-            font-weight: bold;
-            font-size: 3rem; 
-            line-height: 1;
-        }
-    }
-    .divRating{
-        display: flex;
-        align-items: flex-end;
 
-        .firstDiv{
-            display: flex;
-            align-items: center;
-            margin-top: 0.5rem;
-            p{
-                &{
-                    font-size: medium;
-                     margin-left: 0.75rem;
-                }
-            }
-        }
-        .secondDiv{
-            p{
-                font-size: medium;
-                margin-left: 1rem;
-            }
-        }
+    .divReservationCard{
+        display: none;
     }
-
-    .description{
-        margin-top: 1rem;
-        p{
-            font-size: 1.125rem; 
-            line-height: 1.75rem;
-            font-weight:lighter ;
-        }
+    .divMobileReservationCard{
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
     }
-    .imgWrapper{
-        h1{
-            font-weight: bold;
-            font-size: 1.875rem; 
-            line-height: 2.25rem; 
-            margin-top: 2.5rem;
-            margin-bottom: 1.75rem;
-            border-bottom: 1px solid #dcd1d1;
-            padding-bottom: 1rem;
-        }
-        div{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-          
-
-            img{
-                width: 10rem;
-                height: 7.5rem;
-                margin-right: 0.25rem;
-                margin-bottom: 0.25rem;
-            }
-        }
-    }
-
 
 
 }
 @media only screen and (min-width: 600px) {
     .mainContainer{
-        max-width: 75%;
+        min-height: 100vw;
 
     }
     .mainContent{
-    
+        max-width: 75%;
         margin: auto;
         background-color: white;
-        
-        header{
  
-            div{
-  
-                h1{
-                    font-size: 4.5rem; 
-                }
-            }
-        }
     }
     .discriptionContainer{
         width: 90%;
    
-        .discriptionContent{
+    .discriptionContent{
             width: 70%;
     
         }
-
-
-        .imgWrapper{
-            h1{
-                font-weight: bold;
-                font-size: 1.875rem; 
-                line-height: 2.25rem; 
-                margin-top: 2.5rem;
-                margin-bottom: 1.75rem;
-                border-bottom: 1px solid #dcd1d1;
-                padding-bottom: 1rem;
-            }
-            div{
-                display: flex;
-                flex-wrap: wrap;
-              
-    
-                img{
-                    width: 14rem;
-                    height: 11rem;
-                    margin-right: 0.25rem;
-                    margin-bottom: 0.25rem;
-                }
-            }
+    .divReservationCard{
+            display: block;
+            background-color: aqua;
         }
-    
-    
+    .divMobileReservationCard{
+        display: none;
+
+    }
     
     }
   }
