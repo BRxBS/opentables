@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import { RestaurantCardType } from '../../app/page';
 import styles from './styles.module.scss';
 
-
-export function RestaurantCard(){
+interface Props{
+restaurant: RestaurantCardType;
+}
+export function RestaurantCard({}: Props){
     return(
         <>
         <div className={styles.cardsWrapper}>
