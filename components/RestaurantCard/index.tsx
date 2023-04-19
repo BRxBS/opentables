@@ -11,7 +11,7 @@ export function RestaurantCard({restaurant}: Props){
         <>
         <div className={styles.cardsWrapper}>
 
-<Link href="/restaurant/mill-grill/details" className={styles.link}>
+<Link href={`/restaurant${restaurant.slug}`} className={styles.link}>
     <div
     className={styles.cardContentWrapper}
     >

@@ -4,11 +4,13 @@ import { NavBar } from '../components/navBar'
 import { RestaurantCard } from '../components/RestaurantCard';
 import { PrismaClient, Cuisine, Location, PRICE } from '@prisma/client';
 import styles from '../styles/home.module.scss'
+import { SquareLogo } from 'phosphor-react';
 
 export interface RestaurantCardType{
   id: number,
   name: string,
   main_image: string,
+  slug: string,
   cuisine: Cuisine,
   location: Location,
   price: PRICE
@@ -24,7 +26,8 @@ const fetchRestaurants = async (): Promise<RestaurantCardType[]> => {
       main_image: true,
       cuisine: true,
       location: true,
-      price: true
+      price: true,
+      slug: true
     }
   })
 
