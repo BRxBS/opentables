@@ -55,9 +55,13 @@ const restaurants = await fetchRestaurants();
             <main>
             <Header/>
             </main>
+            <div className={styles.RestaurantCardWrapper}>
             {restaurants.map((restaurant) =>(
-              <RestaurantCard restaurant={restaurant}/>
+              <RestaurantCard restaurant={restaurant}
+                                id={restaurant.id}/>
             ))}
+
+            </div >
         </main>
         </main>
     </>
