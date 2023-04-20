@@ -1,17 +1,17 @@
 import Link from 'next/link';
 import { RestaurantCardType } from '../../app/page';
+import { Price } from '../price';
 import styles from './styles.module.scss';
 
 interface Props{
 restaurant: RestaurantCardType;
-id: number
 }
 export function RestaurantCard({restaurant}: Props){
     return(
         <>
         <div className={styles.cardsWrapper}>
 
-<Link href={`/restaurant${restaurant.slug}`} className={styles.link}>
+<Link href={`/restaurant/${restaurant.slug}/details`} className={styles.link}>
     <div
     className={styles.cardContentWrapper}
     >
@@ -28,7 +28,7 @@ export function RestaurantCard({restaurant}: Props){
         </div>
         <div className={styles.infoDiv}>
         <p >{restaurant.cuisine.name}</p>
-        <p >{restaurant.price}</p>
+        <Price price={restaurant.price}/>
         <p>{restaurant.location.name}</p>
         </div>
         <p >Booked 3 times today</p>

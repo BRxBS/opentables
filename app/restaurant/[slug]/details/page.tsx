@@ -10,8 +10,41 @@ import { MobileReservationCard } from '../components/MobileReservationCard';
 import { Rating } from '../components/Rating';
 import { Description } from '../components/Description';
 import { Images } from '../components/Images';
+import { PrismaClient,} from '@prisma/client';
 
-export default function RestaurantDetails(){
+
+export interface Restaurant{
+    id: number,
+    name: string,
+    images: string[],
+    slug: string,
+    description: string
+  }
+  
+  const prisma = new PrismaClient();
+  
+  const fetchRestaurantBySlug = async (slug: string):Promise<Restaurant> =>{
+    const restaurant = await prisma.restaurant.findUnique({
+     where:{
+        slug
+     },
+     select:{
+        id: true,
+        slug: true,
+        name: true,
+        images: true,
+        description:true
+     }
+    })
+  if(!restaurant){
+    throw new Error()
+  }
+    return restaurant;
+  }
+  
+
+export default async function RestaurantDetails({params}: {params: {slug: string}}){
+    const restaurant = await fetchRestaurantBySlug(params.slug)
     return(
         <>
     <main className={s.mainContainer}>
@@ -19,14 +52,14 @@ export default function RestaurantDetails(){
         
             <NavBar/>
             
-            <Header/>
+            <Header name={restaurant.name}/>
             <div className={s.discriptionContainer}>
             <div className={s.discriptionContent}>
-            <RestaurantNavBar/> 
-            <Title/> 
+            <RestaurantNavBar slug={restaurant.slug}/> 
+            <Title name={restaurant.name}/> 
             <Rating/>
-            <Description/>
-            <Images/>
+            <Description description={restaurant.description}/>
+            <Images images={restaurant.images}/>
             <Reviews/>
                  
             </div>

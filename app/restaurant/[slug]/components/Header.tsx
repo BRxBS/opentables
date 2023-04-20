@@ -1,11 +1,17 @@
+import { Restaurant } from '../details/page';
 import s from './styles.module.scss';
 
-export function Header(){
+interface Props{
+    restaurant: Restaurant;
+    id: number
+}
+
+export function Header({name}: {name:string}){
     return(
         <header className={s.header}  >
         <div className={s.divWrapper}>
             <h1>
-            Milestones Grill (Toronto)
+            {name}
             </h1>
         </div>
         </header>
