@@ -61,7 +61,7 @@ const restaurants = await fetchRestaurants();
             <div className={styles.RestaurantCardWrapper}>
             {restaurants.map((restaurant) =>(
               <RestaurantCard restaurant={restaurant}
-                                id={restaurant.id}/>
+                                key={restaurant.id}/>
             ))}
 
             </div >
