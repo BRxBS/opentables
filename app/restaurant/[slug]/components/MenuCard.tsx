@@ -1,14 +1,15 @@
+import { Item } from '@prisma/client';
 import s from './styles.module.scss';
 
-export function MenuCard(){
+export function MenuCard({item}: {item:Item}){
     return(
         <div className={s.menuCard}>
         <div>
-            <h3>Surf and Turf</h3>
+            <h3>{item.name}</h3>
             <p>
-            A well done steak with lobster and rice
+            {item.description}
             </p>
-            <p className={s.p}>$80.00</p>
+            <p className={s.p}>${item.price}</p>
         </div>
         </div>
     )
