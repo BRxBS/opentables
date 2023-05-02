@@ -2,21 +2,46 @@ import { NavBar } from '../../components/navBar';
 import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
 import { MobileBar } from './components/MobileBar';
-import s from './styles.module.scss';
-import Link from 'next/link';
 import { RestaurantCard } from './components/RestaurantCard';
+import { PrismaClient } from '@prisma/client';
+import s from './styles.module.scss';
 
-export default function Search(){
+const prisma = new PrismaClient();
+
+const fetchRestaurantByCity = (city:string) => {
+    const select = {
+        id: true,
+        name: true,
+        main_image: true,
+        price: true,
+        cuisine: true,
+        slug: true
+    }
+    if(!city) return prisma.restaurant.findMany({select});
+    
+    return prisma.restaurant.findMany({
+        where: {
+            location:{
+                name:{
+                    equals:city.toLocaleLowerCase()
+                }
+            }
+        },
+        select,
+    })
+    
+}
+
+export default async function Search({searchParams}:{searchParams: { city: string}}){
+    const restaurants = await fetchRestaurantByCity(searchParams.city)
+    
     return(
         <>
         <main className={s.mainContainer}>
         <main className={s.SecondMainContainer}>
-            {/* NAVBAR */}
             <NavBar/>
-            {/* HEADER */}
             <Header/>
             <div className={s.divContainer}>
-            {/* SEARCH SIDE BAR */}
             <div className={s.divMobileBar}>
             <MobileBar/>
             </div>
@@ -24,13 +49,13 @@ export default function Search(){
             <div className={s.divSideBar}>
             <SideBar/>
             </div>
-            {/* SEARCH SIDE BAR */}
+
             <div className={s.cardContainer}>
-                {/* RESAURANT CAR */}
-                <RestaurantCard/>
-                {/* RESAURANT CAR */}
+                {restaurants.length ? (<RestaurantCard/>) : (<h1>Sorry, no restaurants in this area</h1>)}
+                
             </div>
             </div>
+            
         </main>
         </main>
 
