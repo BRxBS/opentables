@@ -1,8 +1,8 @@
 .asideContent{
-    width: 30%;
+    width: 100%;
+    
     .one{
-        border-bottom: 1px;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
         width: auto;
         
         h1{
@@ -15,8 +15,7 @@
     }
     .two{
         width: auto;
-        border-bottom: 1px;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
         margin-top: 0.75rem;
 
         h1{
@@ -218,7 +217,7 @@
                 padding: 0.5rem 1rem;
                 background-color: rgb(167, 24, 24);
                 color: white;
-              ;
+                cursor: pointer;
             }
         }
     }
