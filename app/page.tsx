@@ -4,7 +4,6 @@ import { NavBar } from '../components/navBar'
 import { RestaurantCard } from '../components/RestaurantCard';
 import { PrismaClient, Cuisine, Location, PRICE } from '@prisma/client';
 import styles from '../styles/home.module.scss'
-import { SquareLogo } from 'phosphor-react';
 
 export interface RestaurantCardType{
   id: number,
