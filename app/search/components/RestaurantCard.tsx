@@ -1,30 +1,36 @@
 import Link from 'next/link';
+import { RestaurantByCity } from '../page';
+import { Price } from '../../../components/price';
 import s from './styles.module.scss';
 
-export function RestaurantCard(){
+interface Props{
+    info: RestaurantByCity;
+}
+
+export function RestaurantCard({info}: Props){
 
     return(
         <>
                 <div className={s.cardContent}>
                 <img
-                    src="https://images.otstatic.com/prod1/49153814/2/medium.jpg"
+                    src={info.main_image}
                     alt=""
                 />
                 <div className={s.info}>
-                    <h2>Aiāna Restaurant Collective</h2>
+                    <h2>{info.name}</h2>
                     <div className={s.divOne}>
                     <p>*****</p>
                     <p>Awesome</p>
                     </div>
                     <div className={s.divTwo}>
                     
-                        <p>$$$</p>
-                        <p>Mexican</p>
-                        <p>Ottawa</p>
+                        <Price price={info.price}/>
+                        <p>{info.cuisine.name}</p>
+                        <p>{info.location.name}</p>
                     
                     </div>
                     <div>
-                    <Link href="/restaurant/mile-stone/details">View more information</Link>
+                    <Link href={`/restaurant/${info.slug}/details`}>View more information</Link>
                     </div>
                 </div>
                 </div>
