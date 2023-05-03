@@ -3,23 +3,34 @@ import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
 import { MobileBar } from './components/MobileBar';
 import { RestaurantCard } from './components/RestaurantCard';
-import { PrismaClient } from '@prisma/client';
+import { Cuisine, Location, PRICE, PrismaClient } from '@prisma/client';
 import s from './styles.module.scss';
+
+export interface RestaurantByCity{
+        id: number,
+        name: string,
+        main_image: string,
+        price: PRICE,
+        cuisine: Cuisine,
+        location: Location,
+        slug: string
+}
 
 const prisma = new PrismaClient();
 
-const fetchRestaurantByCity = (city:string) => {
+const fetchRestaurantByCity = async (city:string | undefined): Promise<RestaurantByCity[]> => {
     const select = {
         id: true,
         name: true,
         main_image: true,
         price: true,
         cuisine: true,
+        location: true,
         slug: true
     }
     if(!city) return prisma.restaurant.findMany({select});
     
-    return prisma.restaurant.findMany({
+    else return prisma.restaurant.findMany({
         where: {
             location:{
                 name:{
@@ -51,7 +62,14 @@ export default async function Search({searchParams}:{searchParams: { city: strin
             </div>
 
             <div className={s.cardContainer}>
-                {restaurants.length ? (<RestaurantCard/>) : (<h1>Sorry, no restaurants in this area</h1>)}
+
+                {restaurants.length ? (               
+                
+                restaurants.map((restaurants)=> (
+                    <RestaurantCard info={restaurants}/>)
+                
+
+                )) : (<h1>Sorry, no restaurants in this area</h1>)}
                 
             </div>
             </div>
