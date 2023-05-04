@@ -49,13 +49,16 @@
         align-items: flex-start;
         padding: 0px 2rem;
         margin: auto;
-        width: 66%;
+        width: 70%;
 
         .divMobileBar{
             display: none;
         }
         .divSideBar{
             display: block;
+            padding: 0px 2rem;
+            position: sticky;
+            top: 0px;
         }
     
         .divContent{
