@@ -21,8 +21,9 @@ export function Header(){
                     />
                     <button 
                     onClick = {() => {
-                    if(location === 'banana') return;
-                    router.push("/search")
+                    if(location === '') return;
+                    router.push(`/search?city=${location}`);
+                    setLocation("")
              }}>
                     Let's go
                     </button>
