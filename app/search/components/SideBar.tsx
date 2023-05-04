@@ -1,9 +1,15 @@
 "use client"
 
+import { Cuisine, Location, PRICE } from '@prisma/client';
 import s from './styles.module.scss';
 
-
-export function SideBar(){
+interface data{
+    // id: number,
+    cusine: Cuisine[],
+    location: Location[],
+    // price: PRICE
+}
+export function SideBar({cusine, location}: data){
 
 
     return(
@@ -13,18 +19,16 @@ export function SideBar(){
 
                 <div className={s.one}>
                 <h1>Region</h1>
-                <p>Toronto</p>
-                <p>Ottawa</p>
-                <p>Montreal</p>
-                <p>Hamilton</p>
-                <p>Kingston</p>
-                <p>Niagara</p>
+                {location.map((location)=>(     
+                <p key={location.id}>{location.name}</p>
+                ))}
                 </div>
                 <div className={s.two}>
                 <h1>Cuisine</h1>
-                <p>Mexican</p>
-                <p>Italian</p>
-                <p>Chinese</p>
+
+                {cusine.map((cusine)=>(     
+                <p key={cusine.id}>{cusine.name}</p>
+                ))}
                 </div>
                 <div className={s.three}>
                 <h1>Price</h1>
@@ -41,9 +45,6 @@ export function SideBar(){
                 </div>
                 </div>
             </aside>
-       
-        
-       
 
         </>
     )

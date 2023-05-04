@@ -2,8 +2,17 @@
 import { useEffect, useState } from 'react';
 import s from './styles.module.scss';
 import {CaretDown, CaretUp} from 'phosphor-react'
+import { Cuisine, Location } from '@prisma/client';
 
-export function MobileBar(){
+
+
+interface data{
+    // id: number,
+    cusine: Cuisine[],
+    location: Location[],
+    // price: PRICE
+}
+export function MobileBar({cusine, location}: data){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -43,18 +52,15 @@ const handleButtonClick = (e: { stopPropagation: () => void; }) => {
 
                 <div className={s.one}>
                 <h1>Region</h1>
-                <p>Toronto</p>
-                <p>Ottawa</p>
-                <p>Montreal</p>
-                <p>Hamilton</p>
-                <p>Kingston</p>
-                <p>Niagara</p>
+                {location.map((location)=>(     
+                <p key={location.id}>{location.name}</p>
+                ))}
                 </div>
                 <div className={s.two}>
                 <h1>Cuisine</h1>
-                <p>Mexican</p>
-                <p>Italian</p>
-                <p>Chinese</p>
+                {cusine.map((cusine)=>(     
+                <p key={cusine.id}>{cusine.name}</p>
+                ))}
                 </div>
                 <div className={s.three}>
                 <h1>Price</h1>
@@ -73,8 +79,6 @@ const handleButtonClick = (e: { stopPropagation: () => void; }) => {
             </aside>
         )}
         
-       
-
         </div>
     )
 }
