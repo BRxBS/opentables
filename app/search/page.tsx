@@ -50,7 +50,9 @@ const fetchCusine =async () => {
     return prisma.cuisine.findMany()
 }
 
-export default async function Search({searchParams}:{searchParams: { city: string}}){
+export default async function Search(
+    {searchParams}:
+    {searchParams: { city?: string, cusine?: string, price?: PRICE}}){
     const restaurants = await fetchRestaurantByCity(searchParams.city)
     const location = await fetchLocation();
     const cusine = await fetchCusine();
