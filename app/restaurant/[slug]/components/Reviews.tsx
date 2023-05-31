@@ -1,38 +1,20 @@
 "use client"
 
+import { Review } from '@prisma/client';
+import { ReviewCard } from './ReviewCard';
 import s from './styles.module.scss';
 
-export function Reviews(){
+export function Reviews( {reviews} : {reviews: Review[]}){
     return(
         <div className={s.reviews} >
         <h1>
-            What 100 people are saying
+            What {reviews.length} {reviews.length === 1 ? "person is saying." : "people are saying"}  
         </h1>
         <div className={s.reviewCard}>
-            {/* REVIEW CARD */}
-            <div>
-            <div className={s.wrapper}>
-                <div className={s.out}>
-                <div>
-                    <h2>MJ</h2>
-                </div>
-                <p >Micheal Jordan</p>
-                </div>
-                <div className={s.outTwo}>
-                <div >
-                    <div>*****</div>
-                </div>
-                <div className={s.pText}>
-                    <p >
-                    Laurie was on top of everything! Slow night due to the
-                    snow storm so it worked in our favor to have more one on
-                    one with the staff. Delicious and well worth the money.
-                    </p>
-                </div>
-                </div>
-            </div>
-            </div>
-            {/* REVIEW CARD */}
+
+             {reviews.map(review => (
+                <ReviewCard review={review} key={review.id}/>
+             ))}
         </div>
         </div>
     )

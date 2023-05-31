@@ -10,7 +10,7 @@ import { MobileReservationCard } from '../components/MobileReservationCard';
 import { Rating } from '../components/Rating';
 import { Description } from '../components/Description';
 import { Images } from '../components/Images';
-import { PrismaClient,} from '@prisma/client';
+import { PrismaClient, Review,} from '@prisma/client';
 
 
 export interface Restaurant{
@@ -18,7 +18,8 @@ export interface Restaurant{
     name: string,
     images: string[],
     slug: string,
-    description: string
+    description: string,
+    review: Review[]
   }
   
   const prisma = new PrismaClient();
@@ -33,7 +34,8 @@ export interface Restaurant{
         slug: true,
         name: true,
         images: true,
-        description:true
+        description:true,
+        review: true
      }
     })
   if(!restaurant){
@@ -57,10 +59,10 @@ export default async function RestaurantDetails({params}: {params: {slug: string
             <div className={s.discriptionContent}>
             <RestaurantNavBar slug={restaurant.slug}/> 
             <Title name={restaurant.name}/> 
-            <Rating/>
+            <Rating  reviews={restaurant.review}/>
             <Description description={restaurant.description}/>
             <Images images={restaurant.images}/>
-            <Reviews/>
+            <Reviews reviews={restaurant.review}/>
                  
             </div>
             <div className={s.divMobileReservationCard}>
