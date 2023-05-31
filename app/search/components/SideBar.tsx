@@ -1,15 +1,17 @@
 "use client"
 
 import { Cuisine, Location, PRICE } from '@prisma/client';
+import Link from 'next/link';
 import s from './styles.module.scss';
 
 interface data{
-    // id: number,
-    cusine: Cuisine[],
+  
+    cuisine: Cuisine[],
     location: Location[],
-    // price: PRICE
+    searchParams: { city?: string, cuisine?: string, price?: PRICE}
+   
 }
-export function SideBar({cusine, location}: data){
+export function SideBar({cuisine, location, searchParams}: data){
 
 
     return(
@@ -20,28 +22,58 @@ export function SideBar({cusine, location}: data){
                 <div className={s.one}>
                 <h1>Region</h1>
                 {location.map((location)=>(     
-                <p key={location.id}>{location.name}</p>
+                <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        city: location.name
+                    }
+                }} key={location.id}>{location.name}</Link>
                 ))}
                 </div>
                 <div className={s.two}>
                 <h1>Cuisine</h1>
 
-                {cusine.map((cusine)=>(     
-                <p key={cusine.id}>{cusine.name}</p>
+                {cuisine.map((cuisine)=>(     
+                <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        cuisine: cuisine.name
+                    }
+                }} key={cuisine.id}>{cuisine.name}</Link>
                 ))}
                 </div>
                 <div className={s.three}>
                 <h1>Price</h1>
                 <div>
-                    <button className={s.button}>
+                    <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.CHEAP
+                    }
+                }} className={s.button}>
                     $
-                    </button>
-                    <button>
+                    </Link>
+                    <Link  href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.REGULAR
+                    }
+                }}>
                     $$
-                    </button>
-                    <button>
+                    </Link>
+                    <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.EXPENSIVE
+                    }
+                }}>
                     $$$
-                    </button>
+                    </Link>
                 </div>
                 </div>
             </aside>

@@ -2,17 +2,18 @@
 import { useEffect, useState } from 'react';
 import s from './styles.module.scss';
 import {CaretDown, CaretUp} from 'phosphor-react'
-import { Cuisine, Location } from '@prisma/client';
+import { Cuisine, Location, PRICE } from '@prisma/client';
+import Link from 'next/link';
 
 
 
 interface data{
     // id: number,
-    cusine: Cuisine[],
+    cuisine: Cuisine[],
     location: Location[],
-    // price: PRICE
+    searchParams: { city?: string, cusine?: string, price?: PRICE}
 }
-export function MobileBar({cusine, location}: data){
+export function MobileBar({cuisine, location, searchParams}: data){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -53,27 +54,55 @@ const handleButtonClick = (e: { stopPropagation: () => void; }) => {
                 <div className={s.one}>
                 <h1>Region</h1>
                 {location.map((location)=>(     
-                <p key={location.id}>{location.name}</p>
+                <Link href={{
+                    pathname:"/search",
+                    query:{
+                        city:location.name
+                    }
+                }} key={location.id}>{location.name}</Link>
                 ))}
                 </div>
                 <div className={s.two}>
                 <h1>Cuisine</h1>
-                {cusine.map((cusine)=>(     
-                <p key={cusine.id}>{cusine.name}</p>
+                {cuisine.map((cuisine)=>(     
+                <Link href={{
+                    pathname:"/search",
+                    query:{
+                        cuisine:cuisine.name
+                    }
+                }} key={cuisine.id}>{cuisine.name}</Link>
                 ))}
                 </div>
                 <div className={s.three}>
                 <h1>Price</h1>
                 <div>
-                    <button className={s.button}>
+                    <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.CHEAP
+                    }
+                }} className={s.button}>
                     $
-                    </button>
-                    <button>
+                    </Link>
+                    <Link  href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.REGULAR
+                    }
+                }}>
                     $$
-                    </button>
-                    <button>
+                    </Link>
+                    <Link href={{
+                    pathname: "/search",
+                    query:{
+                        ...searchParams,
+                        price: PRICE.EXPENSIVE
+                    }
+                }}>
                     $$$
-                    </button>
+                    </Link>
                 </div>
                 </div>
             </aside>
