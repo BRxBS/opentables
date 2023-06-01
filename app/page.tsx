@@ -4,6 +4,7 @@ import { NavBar } from '../components/navBar'
 import { RestaurantCard } from '../components/RestaurantCard';
 import { PrismaClient, Cuisine, Location, PRICE, User, Review } from '@prisma/client';
 import styles from '../styles/home.module.scss'
+import { notFound } from 'next/navigation';
 
 export interface RestaurantCardType{
   id: number,
@@ -31,7 +32,9 @@ const fetchRestaurants = async (): Promise<RestaurantCardType[]> => {
       slug: true,
     }
   })
-
+  if(!restaurants){
+    notFound()
+  }
   return restaurants
 }
 

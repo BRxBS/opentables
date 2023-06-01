@@ -11,6 +11,7 @@ import { Rating } from '../components/Rating';
 import { Description } from '../components/Description';
 import { Images } from '../components/Images';
 import { PrismaClient, Review,} from '@prisma/client';
+import { notFound } from 'next/navigation';
 
 
 export interface Restaurant{
@@ -39,7 +40,7 @@ export interface Restaurant{
      }
     })
   if(!restaurant){
-    throw new Error()
+    notFound()
   }
     return restaurant;
   }
