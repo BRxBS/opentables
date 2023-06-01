@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
 import { MobileBar } from './components/MobileBar';
 import { RestaurantCard } from './components/RestaurantCard';
-import { Cuisine, Location, PRICE, PrismaClient, Review } from '@prisma/client';
+import { PRICE, PrismaClient, Review } from '@prisma/client';
 import s from './styles.module.scss';
 
 interface searchParams {
