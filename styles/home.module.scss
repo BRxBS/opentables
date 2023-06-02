@@ -45,7 +45,7 @@
 }
 
 .modelContainer{
-
+    width: auto;
     padding: 0.5rem;
 
     .modelContent{
@@ -75,7 +75,23 @@
         border: 1px groove rgb(159, 11, 11);
         border-radius: 5px;
         margin: auto;
+        cursor: pointer;
 
+    }
+    .buttonCreateAccount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 1.5rem;
+        padding: 1.5rem 0px;
+        background-color: rgb(159, 11, 11);
+        color: white;
+        font-size: large;
+        border: 1px groove rgb(159, 11, 11);
+        border-radius: 5px;
+        margin: auto;
+        cursor: pointer;
     }
 }
 @media only screen and (min-width: 600px) {

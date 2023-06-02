@@ -12,7 +12,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: "22rem",
   bgcolor: 'background.paper',
   borderRadius: "5px",
   boxShadow: 24,
@@ -42,6 +42,8 @@ export default function AuthModal({isSignin}:{isSignin: boolean}) {
 
   const renderContent = (signinContent: string, signinupContent: string) => {
     return  isSignin ? signinContent : signinupContent
+    // this function has the logic of if else to determine what content to render depending
+    // on the boolean type,true or false
   }
 
   return (
