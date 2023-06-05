@@ -6,44 +6,19 @@ import * as jose from "jose";
 
 const prisma = new PrismaClient();
 
-export async function POST(request: Request) {
-    const { firstName, lastName, email, password, phone, city } =
-        await request.json();
+export async function POST(req: Request) {
+    const { email, password } = await req.json();
     const errors: string[] = []; // array of errors
 
     // start validation with error messages
     const validationSchema = [
         {
-            valid: validator.isLength(firstName, {
-                min: 1,
-                max: 20,
-            }),
-            errorMessage: "First name is Invalid",
-        },
-        {
-            valid: validator.isLength(lastName, {
-                min: 1,
-                max: 20,
-            }),
-            errorMessage: "Last name is Invalid",
-        },
-        {
             valid: validator.isEmail(email),
             errorMessage: "Email is Invalid",
         },
         {
-            valid: validator.isStrongPassword(password),
+            valid: validator.isLength(password, { min: 1 }),
             errorMessage: "Password is Invalid",
-        },
-        {
-            valid: validator.isMobilePhone(phone),
-            errorMessage: "Phone number is Invalid",
-        },
-        {
-            valid: validator.isLength(city, {
-                min: 1,
-            }),
-            errorMessage: "City is Invalid",
         },
     ];
 
@@ -65,47 +40,33 @@ export async function POST(request: Request) {
 
     /* ******************************************************************* */
 
-    // start validation unique email
-    const useWithEmail = await prisma.user.findUnique({
-        where: {
-            email,
-        },
-    });
-    if (useWithEmail) {
+    // start of fiding user
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (!user) {
         return new NextResponse(
-            JSON.stringify({
-                errorMessage: "you already have a account on OpenTables",
-            }),
+            JSON.stringify({ errorMessage: "Email or password is invalid" }),
             {
-                status: 400,
+                status: 401,
                 headers: {
                     "Content-Type": "application/json",
                 },
             }
         );
     }
-    // end validation unique email
 
-    /* ******************************************************************* */
-
-    // start hash the passaword
-    const hashedPassaword = await bcrypt.hash(password, 10); // the 10 adds 10 caracters to the right of salt in the passaword (caracters to make the password stronger)
-    // end hash the passaword
-
-    /* ******************************************************************* */
-
-    // start of creating a new user
-    const user = await prisma.user.create({
-        data: {
-            first_name: firstName,
-            last_name: lastName,
-            password: hashedPassaword,
-            email,
-            phone,
-            city,
-        },
-    });
-    // end of creating a new user
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+        return new NextResponse(
+            JSON.stringify({ errorMessage: "Email or password is invalid" }),
+            {
+                status: 401,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+    }
+    // start of fiding user
 
     /* ******************************************************************* */
 
