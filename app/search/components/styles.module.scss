@@ -1,48 +1,57 @@
-.asideContent{
+.asideContent {
     width: 100%;
-  
-    
-    .one{
+
+    .one {
         padding-bottom: 0.5rem;
         width: auto;
-        
-        
-        h1{
+
+        h1 {
             margin-bottom: 0.5rem;
         }
-        a{
+        a {
+            margin-bottom: 0.5rem;
             display: flex;
             font-weight: lighter;
             font-size: medium;
             text-transform: capitalize;
+            transition: 0.3s;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
-    .two{
+    .two {
         width: auto;
         padding-bottom: 0.5rem;
         margin-top: 0.75rem;
 
-        h1{
+        h1 {
             margin-bottom: 0.5rem;
         }
-        a{
+        a {
+            margin-bottom: 0.5rem;
             display: flex;
             font-weight: lighter;
             font-size: medium;
+            text-transform: capitalize;
+            transition: 0.3s;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
-    .three{
+    .three {
         width: 50%;
         margin-top: 0.75rem;
         padding-bottom: 1rem;
-        
-        h1{
+
+        h1 {
             margin-bottom: 0.5rem;
         }
-        div{
+        div {
             display: flex;
         }
-        .button{
+        .button {
             display: flex;
             background-color: white;
             border: 1px solid #dcd1d1;
@@ -50,7 +59,7 @@
             font-size: medium;
             padding: 0.5rem 1rem;
         }
-        a{
+        a {
             display: flex;
             background-color: white;
             border: 1px solid #dcd1d1;
@@ -61,120 +70,134 @@
         }
     }
 }
-.cardContent{
-
+.cardContainer {
+    border-bottom: 1px solid gray;
+    padding: 1rem 1rem;
+    padding-bottom: 0.5rem;
+    .cardContent {
         display: flex;
-        border-bottom: 1px solid gray;
-        padding: 1rem 1rem;
-
-      
-        img{
+        img {
             height: 7rem;
             border-radius: 5px;
         }
-        .info{
+        .info {
             width: auto;
             padding-left: 0.5rem;
 
-            h2{
+            h2 {
                 margin: 0px;
                 font-size: 1.5rem;
                 line-height: 1.5rem;
             }
-            .divOne{
+            .divOne {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: center;
                 padding: 0px;
-                
-                p{
+
+                span {
+                    display: flex;
+                    img {
+                        height: 1rem;
+                        width: 1rem;
+                    }
+                }
+
+                p {
+                    display: flex;
                     padding: 0px 1rem;
                     align-items: center;
                     font-size: small;
                 }
-
             }
-            .divTwo{
-                   
-                    
-                    display: flex;
-                    p{
-                        padding: 0px 0.25rem;
-                        font-weight: lighter;
-                       
-                        font-size: medium;
-
-                       
-                        
-                    }
-
+            .divTwo {
+                display: flex;
+                .cusineName {
+                    font-weight: 600;
+                }
+                p {
+                    padding: 0px 0.25rem;
+                    font-weight: lighter;
+                    text-transform: capitalize;
+                    font-size: medium;
+                }
             }
         }
-        a{
-            margin-left: 1rem;
+    }
+    .moreInfo {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        height: 2rem;
+
+        a {
+            text-align: end;
             text-decoration: none;
-            color: rgb(188, 10, 10);
+            color: #bc0a0a;
+            transition: 0.2s ease;
         }
-    
-
+        a:hover {
+            text-decoration: underline;
+            color: #a90909;
+        }
+    }
 }
 
-
-.containerAside{
-    .Caret{
+.containerAside {
+    .Caret {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
-    .MobileAsideContent{
-
+    .MobileAsideContent {
         padding: 0rem 2rem;
-        
-        .one{
+
+        .one {
             border-bottom: 1px;
             padding-bottom: 1rem;
             width: auto;
-            
-            h1{
+
+            h1 {
                 margin-bottom: 0.5rem;
             }
-            p{
+            p {
                 font-weight: lighter;
                 font-size: medium;
             }
         }
-        .two{
+        .two {
             width: auto;
             border-bottom: 1px;
             padding-bottom: 1rem;
             margin-top: 0.75rem;
-    
-            h1{
+
+            h1 {
                 margin-bottom: 0.5rem;
             }
-            p{
+            p {
                 font-weight: lighter;
                 font-size: medium;
             }
         }
-        .three{
+        .three {
             width: auto;
             margin-top: 0.75rem;
             padding-bottom: 1rem;
-            
-            h1{
+
+            h1 {
                 margin-bottom: 0.5rem;
             }
-            div{
+            div {
                 display: flex;
             }
-            .button{
+            .button {
                 background-color: white;
                 border: 1px solid #dcd1d1;
                 width: 100%;
                 font-size: medium;
                 padding: 0.5rem 1rem;
             }
-            button{
+            button {
                 background-color: white;
                 border: 1px solid #dcd1d1;
                 width: 100%;
@@ -186,41 +209,43 @@
     }
 }
 
-.header{
+.header {
     height: 8rem;
-    background: rgb(15,31,71);
-    background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
+    background: rgb(15, 31, 71);
+    background: linear-gradient(
+        129deg,
+        rgba(15, 31, 71, 1) 2%,
+        rgba(95, 105, 132, 1) 91%
+    );
     padding: 0.5rem;
 
-    .divWrapper{
+    .divWrapper {
         text-align: center;
         margin-top: 2.5rem;
-     
-        
-        h1{
+
+        h1 {
             color: white;
             font-size: 2rem;
             line-height: 1;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
-        div{
+        div {
             display: flex;
             justify-content: center;
             text-align: left;
-            font-size: 1.125rem; 
-            line-height: 1.75rem;  
-            padding: 0.75rem 0px;    
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            padding: 0.75rem 0px;
             margin: auto;
-           
 
-            input{
+            input {
                 border-radius: 5px;
                 margin-right: 0.75rem;
                 padding: 0.5rem;
                 width: 28.125rem;
             }
-            button{
+            button {
                 border-radius: 5px;
                 padding: 0.5rem 1rem;
                 background-color: rgb(167, 24, 24);
@@ -230,7 +255,6 @@
         }
     }
 }
- 
-@media only screen and (min-width: 600px) {
 
-  }
+@media only screen and (min-width: 600px) {
+}

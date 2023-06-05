@@ -3,7 +3,7 @@ import { Header } from '../components/header'
 import { NavBar } from '../components/navBar'
 import { RestaurantCard } from '../components/RestaurantCard';
 import { PrismaClient, Cuisine, Location, PRICE, User, Review } from '@prisma/client';
-import styles from '../styles/home.module.scss'
+import styles from './styles/home.module.scss'
 import { notFound } from 'next/navigation';
 
 export interface RestaurantCardType{
@@ -33,7 +33,7 @@ const fetchRestaurants = async (): Promise<RestaurantCardType[]> => {
     }
   })
   if(!restaurants){
-    notFound()
+    notFound() //the component not found
   }
   return restaurants
 }

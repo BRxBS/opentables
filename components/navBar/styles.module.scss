@@ -1,32 +1,40 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     background-color: white;
     padding: 0.5rem 1rem;
 
-    a{
+    a {
         font-weight: 600;
         color: gray;
         font-size: 1.5rem;
         text-decoration: none;
-
     }
-    div{
+    div {
         display: flex;
     }
-    div{
+    div {
         display: flex;
         justify-content: space-between;
         width: 11rem;
-
     }
-
-
+    .butSignout {
+        margin-left: 5rem;
+        background-color: rgb(15, 31, 71);
+        width: 5rem;
+        color: white;
+        font-weight: 600;
+        border: 1px;
+        border-radius: 5px;
+        padding: 0.25rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+    }
 }
 @media only screen and (min-width: 600px) {
-.nav{
-    a{
-        font-size: 2rem;
+    .nav {
+        a {
+            font-size: 2rem;
+        }
     }
 }
-  }

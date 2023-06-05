@@ -1,49 +1,51 @@
-.description{
+.description {
     margin-top: 1rem;
-    padding:0px  1rem;
-    p{
-        
-        font-weight:lighter ;
+    padding: 0px 1rem;
+    p {
+        font-weight: lighter;
     }
 }
-.header{
-        height: 8rem;
-        background: rgb(15,31,71);
-        background: linear-gradient(129deg, rgba(15,31,71,1) 2%, rgba(95,105,132,1) 91%);
-        padding: 5rem;
-    
-        .divWrapper{
-            margin: auto;
-            text-align: center;      
-            
-            h1{
-                color: white;
-                font-size: 2rem;
-                line-height: 1;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-                text-transform: capitalize;
-            }
+.header {
+    height: 8rem;
+    background: rgb(15, 31, 71);
+    background: linear-gradient(
+        129deg,
+        rgba(15, 31, 71, 1) 2%,
+        rgba(95, 105, 132, 1) 91%
+    );
+    padding: 5rem;
+
+    .divWrapper {
+        margin: auto;
+        text-align: center;
+
+        h1 {
+            color: white;
+            font-size: 2rem;
+            line-height: 1;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
         }
+    }
 }
 
-.imgWrapper{
-    h1{
+.imgWrapper {
+    h1 {
         font-weight: bold;
-        font-size: 1.875rem; 
-        line-height: 2.25rem; 
+        font-size: 1.875rem;
+        line-height: 2.25rem;
         margin-top: 2.5rem;
         margin-bottom: 1.75rem;
         border-bottom: 1px solid #dcd1d1;
         padding-bottom: 1rem;
     }
-    div{
+    div {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      
 
-        img{
+        img {
             width: 10rem;
             height: 7.5rem;
             margin-right: 0.25rem;
@@ -51,13 +53,13 @@
         }
     }
 }
-.menu{
-    div{
-        .one{
+.menu {
+    div {
+        .one {
             margin: 1rem 0px;
             border-top: 1px solid #dcd1d1;
-            border-bottom: 1px solid #dcd1d1;  
-            h1{
+            border-bottom: 1px solid #dcd1d1;
+            h1 {
                 font-weight: bold;
                 font-size: 2.25rem;
                 line-height: 2.5rem;
@@ -65,183 +67,90 @@
         }
     }
 }
-.menuCard{
+.menuCard {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 50%;
     height: 10rem;
     border: 1px solid #dcd1d1;
-    div{
+    div {
         border-radius: 5px;
-        padding: 1rem; 
-        h3{
+        padding: 1rem;
+        h3 {
             font-weight: bold;
-            font-size:1.25rem;
+            font-size: 1.25rem;
             margin: 0px;
         }
-        p{
+        p {
             font-weight: lighter;
             margin-top: 0.25rem;
         }
     }
 }
-.MobileReservationContainer{
-    box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07);
+.MobileReservationContainer {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
     background-color: white;
     width: 95%;
     font-size: medium;
     position: relative;
     margin: auto;
 
-    .Caret{
+    .Caret {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        svg{
+        svg {
             position: relative;
             top: 1.5rem;
             left: 0.5rem;
         }
-    } 
-    .divOne{
+    }
+    .divOne {
         display: flex;
         justify-content: center;
         text-align: center;
         font-weight: bold;
-        h4{
+        h4 {
             font-size: 1.25rem;
         }
     }
-    .reservationContent{
+    .reservationContent {
         width: 93%;
         background-color: white;
         border-radius: 5px;
         padding: 0.75rem;
         margin: 0px;
 
-        
- 
-        .divTwo{
-           
+        .divTwo {
             display: flex;
             flex-direction: column;
             margin: 1.25rem 0px;
-            select{
+            select {
                 padding: 0.75rem;
                 border: none;
                 border-bottom: 1px solid #dcd1d1;
-               
             }
         }
-        .divThree{
+        .divThree {
             display: flex;
             justify-content: space-between;
 
-            div{
+            div {
                 display: flex;
                 flex-direction: column;
                 width: 48%;
-                input{
+                input {
                     margin-top: 0.5rem;
                     padding: 0.5rem;
                     border: none;
                     border-bottom: 1px solid #dcd1d1;
-                    font-weight: lighter;   
+                    font-weight: lighter;
                 }
-                select{
-                    margin-top: 0.5rem;
-                    padding: 0.5rem;
-                    border: none;
-                    border-bottom: 1px solid #dcd1d1;
-                    font-weight: lighter;   
-                }
-            }
-        }
-        .divFour{
-            margin-top: 2rem;
-            button{
-                background-color: #ff0000;
-                border-radius: 5px;
-                border: 1px solid #cb1717 ;
-                width: 100%;   
-                color: white;
-                font-weight: bold;
-                font-size: 1rem;
-                height: 3rem;
-            }
-        }
-    }
-}
-.divRating{
-    display: flex;
-    align-items: flex-end;
-    .firstDiv{
-        display: flex;
-        align-items: center;
-        margin-top: 0.5rem;
-        p{
-            &{
-                font-size: medium;
-                 margin-left: 0.75rem;
-            }
-        }
-    }
-    .secondDiv{
-        p{
-            font-size: medium;
-            margin-left: 1rem;
-        }
-    }
-}
-
-.reservationContainer{
-    width: 25%;
-    font-size: medium;
-
-    .reservationContent{
-        box-shadow:1px 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05);
-        position: fixed;
-        bottom: 0px;
-        right: 9rem;
-        width: 18%;
-        background-color: white;
-        border-radius: 5px;
-        padding: 0.75rem;
-        .divOne{
-           
-            text-align: center;
-            font-weight: bold;
-            h4{
-                font-size: 1.25rem;
-            }
-        }
-        .divTwo{  
-            display: flex;
-            flex-direction: column;
-            margin: 1.25rem 0px;
-            select{
-                padding: 0.75rem;
-                border: none;
-                border-bottom: 1px solid #dcd1d1;   
-            }
-        }
-        .divThree{
-            display: flex;
-            justify-content: space-between;
-            div{
-                display: flex;
-                flex-direction: column;
-                width: 48%;
-                input{
-                    margin-top: 0.5rem;
-                    padding: 0.5rem;
-                    border: none;
-                    border-bottom: 1px solid #dcd1d1;
-                    font-weight: lighter; 
-                }
-                select{
+                select {
                     margin-top: 0.5rem;
                     padding: 0.5rem;
                     border: none;
@@ -250,13 +159,109 @@
                 }
             }
         }
-        .divFour{
+        .divFour {
             margin-top: 2rem;
-            button{
+            button {
                 background-color: #ff0000;
                 border-radius: 5px;
-                border: 1px solid #cb1717 ;
-                width: 100%;   
+                border: 1px solid #cb1717;
+                width: 100%;
+                color: white;
+                font-weight: bold;
+                font-size: 1rem;
+                height: 3rem;
+            }
+        }
+    }
+}
+.divRating {
+    display: flex;
+    align-items: center;
+
+    .firstDiv {
+        display: flex;
+        align-items: center;
+
+        p {
+            & {
+                font-size: medium;
+                margin-left: 0.75rem;
+            }
+        }
+    }
+    .secondDiv {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        p {
+            font-size: medium;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.reservationContainer {
+    width: 25%;
+    font-size: medium;
+
+    .reservationContent {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25),
+            0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15),
+            0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        bottom: 0px;
+        right: 9rem;
+        width: 18%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 0.75rem;
+        .divOne {
+            text-align: center;
+            font-weight: bold;
+            h4 {
+                font-size: 1.25rem;
+            }
+        }
+        .divTwo {
+            display: flex;
+            flex-direction: column;
+            margin: 1.25rem 0px;
+            select {
+                padding: 0.75rem;
+                border: none;
+                border-bottom: 1px solid #dcd1d1;
+            }
+        }
+        .divThree {
+            display: flex;
+            justify-content: space-between;
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 48%;
+                input {
+                    margin-top: 0.5rem;
+                    padding: 0.5rem;
+                    border: none;
+                    border-bottom: 1px solid #dcd1d1;
+                    font-weight: lighter;
+                }
+                select {
+                    margin-top: 0.5rem;
+                    padding: 0.5rem;
+                    border: none;
+                    border-bottom: 1px solid #dcd1d1;
+                    font-weight: lighter;
+                }
+            }
+        }
+        .divFour {
+            margin-top: 2rem;
+            button {
+                background-color: #ff0000;
+                border-radius: 5px;
+                border: 1px solid #cb1717;
+                width: 100%;
                 color: white;
                 font-weight: bold;
                 font-size: 1rem;
@@ -266,54 +271,55 @@
     }
 }
 
-.nav{
-        display: flex;
-        font-size: medium;
-        border-bottom: 1px;
-        a{
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-right: 1.75rem;
-            text-decoration: none;
-            color: black;
-        }
-
+.nav {
+    display: flex;
+    font-size: medium;
+    border-bottom: 1px;
+    a {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-right: 1.75rem;
+        text-decoration: none;
+        color: black;
+    }
 }
 
-.divTitle{
+.divTitle {
     margin-top: 1rem;
     border-top: 1px solid #dcd1d1;
     border-bottom: 1px solid #dcd1d1;
-    h1{
+    h1 {
         font-weight: bold;
-        font-size: 3rem; 
+        font-size: 3rem;
         line-height: 1;
     }
 }
-.reviews{    
-    h1{
+.reviews {
+    h1 {
         font-weight: bold;
-        font-size: 1.875rem; 
+        font-size: 1.875rem;
         line-height: 2.25rem;
         margin-top: 2.5rem;
         margin-bottom: 1.75rem;
         border-bottom: 1px;
         padding-bottom: 1.25rem;
     }
-    .reviewCard{
-       
-        div{
+    .noReviews {
+        text-align: center;
+    }
+    .reviewCard {
+        div {
             margin-bottom: 1.75rem;
         }
-        .wrapper{
+        .wrapper {
             display: flex;
         }
-        .out{
+        .out {
             display: flex;
             align-items: center;
             flex-direction: column;
             width: 16rem;
-            div{
+            div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -322,7 +328,7 @@
                 width: 4rem;
                 height: 4rem;
                 text-align: center;
-                h2{
+                h2 {
                     margin: 0px;
                     text-transform: uppercase;
                     text-align: center;
@@ -330,24 +336,24 @@
                     font-size: 1.5rem;
                 }
             }
-            p{
+            p {
                 text-align: center;
             }
         }
-        .outTwo{
+        .outTwo {
             padding: 1rem;
             width: 100%;
-            div{
+            div {
                 display: flex;
                 align-items: center;
                 padding: 0px;
                 margin: 0px;
-                div{
-                display: flex; 
+                div {
+                    display: flex;
                 }
             }
-            .pText{
-                p{
+            .pText {
+                p {
                     font-size: medium;
                     font-weight: lighter;
                 }
@@ -356,22 +362,19 @@
     }
 }
 @media only screen and (min-width: 600px) {
-.header{
-    .divWrapper{
-
-            h1{
-                font-size: 4.5rem; 
+    .header {
+        .divWrapper {
+            h1 {
+                font-size: 4.5rem;
             }
         }
-    
-}
-.imgWrapper{
-    div{
-        img{
-            width: 14rem;
-            height: 11rem;
- 
+    }
+    .imgWrapper {
+        div {
+            img {
+                width: 14rem;
+                height: 11rem;
+            }
         }
     }
-}
 }
